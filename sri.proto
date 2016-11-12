@@ -1,0 +1,25 @@
+syntax = "proto3";
+package gateway
+import "google/api/annotations.proto";
+
+message SriMessage {
+  int32 msgId = 1;
+  string textMsg = 2;
+  int64 when = 3;
+  string name = 4;
+}
+
+service MessageService {
+  rpc SendMessage(SriMessage) returns (SriResponse) {
+    option (google.api.http) = {
+      post: "/sri/"
+      body: "*"
+    };
+  }
+}
+
+message SriResponse {
+  bool ok = 1;
+  string errMessage = 2;
+  int32 msgId = 3;
+}
