@@ -1,5 +1,5 @@
 syntax = "proto3";
-package gateway
+package gateway;
 import "google/api/annotations.proto";
 
 message SriMessage {
@@ -12,7 +12,7 @@ message SriMessage {
 service MessageService {
   rpc SendMessage(SriMessage) returns (SriResponse) {
     option (google.api.http) = {
-      post: "/sri/"
+      post: "/sri/message"
       body: "*"
     };
   }
