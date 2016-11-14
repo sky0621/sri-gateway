@@ -1,0 +1,85 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "sri.proto",
+    "version": "version not set"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/sri/message": {
+      "post": {
+        "operationId": "SendMessage",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/gatewaySriResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/gatewaySriMessage"
+            }
+          }
+        ],
+        "tags": [
+          "MessageService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "gatewaySriMessage": {
+      "type": "object",
+      "properties": {
+        "msgId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string",
+          "format": "string"
+        },
+        "textMsg": {
+          "type": "string",
+          "format": "string"
+        },
+        "when": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "gatewaySriResponse": {
+      "type": "object",
+      "properties": {
+        "errMessage": {
+          "type": "string",
+          "format": "string"
+        },
+        "msgId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ok": {
+          "type": "boolean",
+          "format": "boolean"
+        }
+      }
+    }
+  }
+}
