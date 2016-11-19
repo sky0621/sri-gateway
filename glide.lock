@@ -1,0 +1,42 @@
+hash: 3802073f32341822ffc38a48528db75ac2f9595499154d8fc5e835a76be3e850
+updated: 2016-11-20T07:36:23.6429112+09:00
+imports:
+- name: github.com/golang/glog
+  version: 23def4e6c14b4da8ac2ed8007337bc5eb5007998
+- name: github.com/golang/protobuf
+  version: 8ee79997227bf9b34611aee7946ae64735e6fd93
+  subpackages:
+  - jsonpb
+  - proto
+  - protoc-gen-go/descriptor
+- name: github.com/grpc-ecosystem/grpc-gateway
+  version: 9108558898db5ff1671121738778c71a49c5aab4
+  subpackages:
+  - runtime
+  - runtime/internal
+  - third_party/googleapis/google/api
+  - utilities
+- name: golang.org/x/net
+  version: 4971afdc2f162e82d185353533d3cf16188a9f4e
+  subpackages:
+  - context
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - lex/httplex
+  - trace
+- name: google.golang.org/grpc
+  version: 63bd55dfbf781b183216d2dd4433a659c947648a
+  subpackages:
+  - codes
+  - credentials
+  - grpclog
+  - internal
+  - metadata
+  - naming
+  - peer
+  - stats
+  - tap
+  - transport
+testImports: []
